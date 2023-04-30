@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2023 The Evolution X Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+
+    <!-- Power Efficient Workqueue sysfs node path -->
+    <string name="node_power_efficient_workqueue_switch" translatable="false"></string>
+
+    <!-- MSM Touchboost sysfs node path -->
+    <string name="node_touchboost_switch" translatable="false"></string>
+
+    <!-- High Brightness sysfs node path -->
+    <string name="node_hbm_switch" translatable="false"></string>
+
+    <!-- Anti-Flicker sysfs node path -->
+    <string name="node_antiflicker_switch" translatable="false"></string>
+
+    <!-- Kcal sysfs node paths -->
+    <string name="node_red_preference" translatable="false"></string>
+    <string name="node_green_preference" translatable="false"></string>
+    <string name="node_blue_preference" translatable="false"></string>
+    <string name="node_saturation_preference" translatable="false"></string>
+    <string name="node_contrast_preference" translatable="false"></string>
+    <string name="node_hue_preference" translatable="false"></string>
+    <string name="node_value_preference" translatable="false"></string>
+
+    <!-- Keep PCC sysfs node path -->
+    <string name="node_keep_pcc_switch" translatable="false"></string>
+
+    <!-- Max Brightness sysfs node path-->
+    <string name="node_max_brightness_preference" translatable="false"></string>
+
+    <!-- FSync sysfs node path-->
+    <string name="node_fsync_switch" translatable="false"></string>
+
+    <!-- AdrenoBoost sysfs node path -->
+    <string name="node_adrenoboost_preference" translatable="false"></string>
+ 
+    <!-- PowerShare procfs node path -->
+    <string name="node_powershare_switch" translatable="false"></string>
+
+    <!-- Quiet Mode procfs node path -->
+    <string name="node_quiet_mode_switch" translatable="false"></string>
+
+    <!-- Microphone gain sysfs node path -->
+    <string name="node_microphone_gain_preference" translatable="false"></string>
+
+    <!-- Speaker gain sysfs node path -->
+    <string name="node_speaker_gain_preference" translatable="false"></string>
+
+    <!-- Edge limit node path -->
+    <string name="node_edge_limit_switch" translatable="false"></string>
+
+    <!-- High touch polling rate procfs node path -->
+    <string name="node_high_touch_polling_rate_switch" translatable="false"></string>
+
+    <!-- USB 2.0 Force fastcharge sysfs node path -->
+    <string name="node_usb2_fast_charge_switch" translatable="false"></string>
+
+    <!-- USB-OTG sysfs node path -->
+    <string name="node_usb_otg_switch" translatable="false"></string>
+
+    <!-- Vibration strength sysfs node path -->
+    <string name="node_vibrator_strength_preference" translatable="false"></string>
+
+</resources>

@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2023 The Evolution X Project
+                   2018-2021 crDroid Android Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:settings="http://schemas.android.com/apk/res/org.evolution.oplus.OPlusExtras">
+
+    <com.android.settingslib.widget.TopIntroPreference
+        android:key="oplus_extras_intro"
+        android:title="@string/oplus_extras_summary"/>
+
+    <!-- Start of alert slider category -->
+    <PreferenceCategory
+        android:key="slider"
+        android:title="@string/category_alert_slider">
+
+        <ListPreference
+            android:key="slider_usage"
+            android:dialogTitle="@string/alert_slider_usage_title"
+            android:title="@string/alert_slider_usage_title"
+            android:entries="@array/alert_slider_usage_entries"
+            android:entryValues="@array/alert_slider_usage_entry_values"
+            android:summary="%s" />
+
+        <ListPreference
+            android:key="action_top_position"
+            android:dialogTitle="@string/alert_slider_selection_dialog_title"
+            android:title="@string/alert_slider_top_position"
+            android:summary="%s" />
+
+        <ListPreference
+            android:key="action_middle_position"
+            android:dialogTitle="@string/alert_slider_selection_dialog_title"
+            android:title="@string/alert_slider_middle_position"
+            android:summary="%s" />
+
+        <ListPreference
+            android:key="action_bottom_position"
+            android:dialogTitle="@string/alert_slider_selection_dialog_title"
+            android:title="@string/alert_slider_bottom_position"
+            android:summary="%s" />
+    </PreferenceCategory>
+
+    <!-- Start of CPU category -->
+    <PreferenceCategory  
+        android:key="category_cpu"
+        android:title="@string/category_cpu">
+
+        <SwitchPreference
+            android:key="power_efficient_workqueue"
+            android:title="@string/power_efficient_workqueue_title"
+            android:summary="@string/power_efficient_workqueue_summary" />
+
+        <SwitchPreference
+            android:key="touchboost"
+            android:title="@string/touchboost_title"
+            android:summary="@string/touchboost_summary" />
+    </PreferenceCategory>
+
+    <!-- Start of display category -->
+    <PreferenceCategory  
+        android:key="category_display"
+        android:title="@string/category_display">
+
+        <Preference
+            android:key="ambient_display_gestures_settings"
+            android:title="@string/ambient_display_gestures_title"
+            android:summary="@string/ambient_display_gestures_summary"
+            android:persistent="false" >
+            <intent android:action="android.intent.action.MAIN"  
+                    android:targetPackage="org.evolution.oplus.OPlusExtras"
+                    android:targetClass="org.evolution.oplus.OPlusExtras.doze.DozeSettingsActivity" />
+        </Preference>
+
+        <SwitchPreference    
+            android:key="antiflicker"
+            android:title="@string/antiflicker_title"
+            android:summary="@string/antiflicker_summary" />
+
+        <Preference
+            android:key="antiflicker_info"
+            android:icon="@drawable/ic_info_outline"
+            android:summary="@string/antiflicker_info"
+            android:persistent="false" />
+
+        <SwitchPreference
+            android:key="hbm"
+            android:title="@string/hbm_title"
+            android:summary="@string/hbm_summary" />
+
+        <Preference
+            android:key="hbm_info"
+            android:icon="@drawable/ic_info_outline"
+            android:summary="@string/hbm_info" 
+            android:persistent="false" />
+
+        <Preference
+            android:key="kcal"
+            android:title="@string/kcal_title"
+            android:summary="@string/kcal_summary"
+            android:persistent="false" >
+            <intent android:action="android.intent.action.MAIN"
+                    android:targetPackage="org.evolution.oplus.OPlusExtras"
+                    android:targetClass="org.evolution.oplus.OPlusExtras.kcal.KcalActivity" />
+        </Preference>
+
+        <SwitchPreference
+            android:key="keep_pcc"
+            android:title="@string/keep_pcc_title"
+            android:summary="@string/keep_pcc_summary" />
+
+        <org.evolution.oplus.OPlusExtras.CustomSeekBarPreference
+            android:key="max_brightness"
+            android:title="@string/max_brightness_title"
+            android:summary="@string/max_brightness_summary"
+            android:persistent="true"
+            android:max="4095"
+            android:min="2047"
+            android:defaultValue="2047" />
+    </PreferenceCategory>
+
+    <!-- Start of filesystem category -->
+    <PreferenceCategory
+        android:key="category_filesystem"
+        android:title="@string/category_filesystem">
+
+        <SwitchPreference
+            android:key="fsync"
+            android:title="@string/fsync_title"
+            android:summary="@string/fsync_summary" 
+            android:defaultValue="true" />
+
+        <Preference
+            android:key="fsync_info"
+            android:icon="@drawable/ic_info_outline"
+            android:summary="@string/fsync_info"
+            android:persistent="false" />
+    </PreferenceCategory>
+
+    <!-- Start of GPU Category -->
+    <PreferenceCategory
+        android:key="category_gpu"
+        android:title="@string/category_gpu">
+
+        <org.evolution.oplus.OPlusExtras.CustomSeekBarPreference
+            android:key="adrenoboost"
+            android:title="@string/adrenoboost_title"
+            android:summary="@string/adrenoboost_summary"
+            android:persistent="true"
+            android:max="3"
+            android:min="0"
+            android:defaultValue="0" />
+    </PreferenceCategory>
+
+    <!-- Start of power Category -->
+    <PreferenceCategory
+        android:key="category_power"
+        android:title="@string/category_power">
+
+        <SwitchPreference
+            android:key="powershare"
+            android:title="@string/powershare_title"
+            android:summary="@string/powershare_summary" />
+
+        <SwitchPreference
+            android:key="quiet_mode"
+            android:title="@string/quiet_mode_title"
+            android:summary="@string/quiet_mode_summary" />
+    </PreferenceCategory>
+
+    <!-- Start of sound control category -->
+    <PreferenceCategory
+        android:key="category_sound_control"
+        android:title="@string/category_sound_control">
+
+        <org.evolution.oplus.OPlusExtras.CustomSeekBarPreference
+            android:key="mic_gain"
+            android:title="@string/mic_gain_title"
+            android:summary="@string/mic_gain_summary"
+            android:persistent="true"
+            android:max="20"
+            android:min="0"
+            android:defaultValue="0" />
+
+        <org.evolution.oplus.OPlusExtras.CustomSeekBarPreference
+            android:key="speaker_gain"
+            android:title="@string/speaker_gain_title"
+            android:summary="@string/speaker_gain_summary"
+            android:persistent="true"
+            android:max="8"
+            android:min="0"
+            android:defaultValue="0" />
+    </PreferenceCategory>
+
+    <!-- Start of touchscreen Category -->
+    <PreferenceCategory
+        android:key="category_touchscreen"
+        android:title="@string/category_touchscreen">
+
+        <SwitchPreference
+            android:key="high_touch_polling_rate"
+            android:title="@string/high_touch_polling_rate_title"
+            android:summary="@string/high_touch_polling_rate_summary" />
+
+        <Preference
+            android:key="high_touch_polling_rate_info"
+            android:icon="@drawable/ic_info_outline"
+            android:summary="@string/high_touch_polling_rate_info"
+            android:persistent="false" />
+
+        <SwitchPreference
+            android:key="edge_limit"
+            android:title="@string/edge_limit_title"
+            android:summary="@string/edge_limit_summary" />
+
+        <Preference
+            android:key="touchscreen_gestures"
+            android:title="@string/touchscreen_gesture_settings_title"
+            android:summary="@string/touchscreen_gesture_settings_summary"
+            android:persistent="false" >
+            <intent android:action="android.intent.action.MAIN"
+                    android:targetPackage="org.evolution.oplus.OPlusExtras"
+                    android:targetClass="org.evolution.oplus.OPlusExtras.touch.TouchscreenGestureSettings" />
+        </Preference>
+    </PreferenceCategory>
+
+    <!-- Start of UiBench Category -->
+    <PreferenceCategory
+        android:key="category_uibench"
+        android:title="@string/category_uibench">
+
+        <Preference
+            android:key="jitter"
+            android:title="@string/jitter_test_title"
+            android:summary="@string/jitter_test_summary"
+            android:persistent="false" >
+            <intent android:action="android.intent.action.MAIN"
+                    android:targetPackage="org.evolution.oplus.OPlusExtras"
+                    android:targetClass="org.evolution.oplus.OPlusExtras.uibench.JitterTestActivity" />
+        </Preference>
+    </PreferenceCategory>
+
+    <!-- Start of usb category -->
+    <PreferenceCategory
+        android:key="category_usb"
+        android:title="@string/category_usb">
+
+        <SwitchPreference
+            android:key="usb2_fast_charge"
+            android:title="@string/usb2_fast_charge_title"
+            android:summary="@string/usb2_fast_charge_summary" />
+
+        <Preference
+            android:key="usb2_fast_charge_info"
+            android:icon="@drawable/ic_info_outline"
+            android:summary="@string/usb2_fast_charge_info"
+            android:persistent="false" />
+
+        <SwitchPreference
+            android:key="usb_otg"
+            android:title="@string/usb_otg_title"
+            android:summary="@string/usb_otg_summary" />
+    </PreferenceCategory>
+
+    <!-- Start of vibrator category -->
+    <PreferenceCategory
+        android:key="category_vibrator"
+        android:title="@string/category_vibrator">
+
+        <org.evolution.oplus.OPlusExtras.CustomSeekBarPreference
+            android:key="vibrator_strength"
+            android:title="@string/vibrator_strength_title"
+            android:summary="@string/vibrator_strength_summary"
+            android:persistent="true"
+            android:max="3"
+            android:min="0"
+            android:defaultValue="3" />
+    </PreferenceCategory>
+</PreferenceScreen>

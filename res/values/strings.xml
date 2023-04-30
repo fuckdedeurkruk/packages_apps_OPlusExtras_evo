@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2023 The Evolution X Project
+                   2016-2022 crDroid Android Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- OPlusExtras -->
+    <string name="oplus_extras_title">OPlus Extras</string>
+    <string name="oplus_extras_summary">Configure device specific settings</string>
+    <string name="oplus_extras_warning_title">Warning</string>
+    <string name="oplus_extras_warning_text">These features rely on specific kernel nodes in order to function. When flashing a custom kernel, you risk the possibility of losing access to some of these features. You have been warned!</string>
+    <string name="oplus_extras_dialog">OK</string>
+
+    <!-- OPlusExtras categories -->
+    <string name="category_alert_slider">Alert slider</string>
+    <string name="category_cpu">CPU</string>
+    <string name="category_display">Display</string>
+    <string name="category_filesystem">Filesystem</string>
+    <string name="category_gpu">GPU</string>
+    <string name="category_power">Power</string>
+    <string name="category_sound_control">Sound control</string>
+    <string name="category_touchscreen">Touchscreen</string>
+    <string name="category_uibench">UiBench</string>
+    <string name="category_usb">USB</string>
+    <string name="category_vibrator">Vibrator</string>
+
+    <!-- Alert slider -->
+    <string name="alert_slider_selection_dialog_title">Action</string>
+    <string name="alert_slider_top_position">Top position</string>
+    <string name="alert_slider_middle_position">Middle position</string>
+    <string name="alert_slider_bottom_position">Bottom position</string>
+    <string name="alert_slider_mode_total_silence">Total silence</string>
+    <string name="alert_slider_mode_alarms_only">Alarms only</string>
+    <string name="alert_slider_mode_priority_only">Priority only</string>
+    <string name="alert_slider_mode_none">All</string>
+    <string name="alert_slider_usage_title">Use slider for</string>
+    <string name="alert_slider_for_notification">Notification</string>
+    <string name="alert_slider_for_flashlight">Flashlight</string>
+    <string name="alert_slider_for_brightness">Brightness</string>
+    <string name="alert_slider_for_rotation">Rotation</string>
+    <string name="alert_slider_for_ringer">Ringer</string>
+    <string name="alert_slider_for_notification_ringer">Notification and ringer</string>
+    <string name="alert_slider_for_extradim">Extra Dim</string>
+    <string name="alert_slider_for_nightlight">Night Light</string>
+    <string name="alert_slider_for_refresh">Refresh rate</string>
+    <string name="alert_slider_for_colorspace">Colorspace</string>
+    <string name="alert_slider_flashlight_off">Off</string>
+    <string name="alert_slider_flashlight_on">On</string>
+    <string name="alert_slider_flashlight_blink">Blink</string>
+    <string name="alert_slider_brightness_auto">Auto</string>
+    <string name="alert_slider_brightness_brightest">Brightest</string>
+    <string name="alert_slider_brightness_darkest">Darkest</string>
+    <string name="alert_slider_rotation_auto">Auto</string>
+    <string name="alert_slider_rotation_portrait">Portrait</string>
+    <string name="alert_slider_rotation_landscape_90">Landscape (90°)</string>
+    <string name="alert_slider_rotation_landscape_270">Landscape (270°)</string>
+    <string name="alert_slider_ringer_normal">Normal</string>
+    <string name="alert_slider_ringer_vibrate">Vibrate</string>
+    <string name="alert_slider_ringer_silent">Silent</string>
+    <string name="alert_slider_extradim_off">Off</string>
+    <string name="alert_slider_extradim_min">Min</string>
+    <string name="alert_slider_extradim_mid">Mid</string>
+    <string name="alert_slider_extradim_max">Max</string>
+    <string name="alert_slider_nightlight_off">Off</string>
+    <string name="alert_slider_nightlight_min">Min</string>
+    <string name="alert_slider_nightlight_mid">Mid</string>
+    <string name="alert_slider_nightlight_max">Max</string>
+    <string name="alert_slider_refresh_auto">Auto</string>
+    <string name="alert_slider_refresh_min">Min</string>
+    <string name="alert_slider_refresh_max">Max</string>
+    <string name="alert_slider_colorspace_vivid">Vivid</string>
+    <string name="alert_slider_colorspace_natural">Natural</string>
+    <string name="alert_slider_colorspace_cinematic">Cinematic</string>
+    <string name="alert_slider_colorspace_brilliant">Brilliant</string>
+
+    <!-- CPU -->
+    <string name="power_efficient_workqueue_title">Power efficient workqueue</string>
+    <string name="power_efficient_workqueue_summary">Save power by rescheduling work to a core that is already awake</string>
+    <string name="touchboost_title">Touchboost</string>
+    <string name="touchboost_summary">Whether to boost CPU frequency on touchscreen input</string>
+
+    <!-- Display -->
+    <string name="antiflicker_title">Anti flicker</string>
+    <string name="antiflicker_summary">Prevent extensive flickering and reduce eye strain in low light conditions</string>
+    <string name="antiflicker_info">May degrade color accuracy and affect the way some items are displayed</string>
+    <string name="hbm_title">High brightness mode</string>
+    <string name="hbm_summary">Enable peak luminance</string>
+    <string name="hbm_info">Long time usage of High brightness mode may damage your display</string>
+    <string name="keep_pcc_title">Keep PCC enabled</string>
+    <string name="keep_pcc_summary">Don\'t turn off Panel Color Correction (Night Light, Kcal) when pressing on the UDFPS circle</string>
+    <string name="max_brightness_title">Maximum brightness</string>
+    <string name="max_brightness_summary">Increase the maximum brightness level</string>
+
+    <!-- Doze -->
+    <string name="ambient_enable">Use ambient display</string>
+    <string name="ambient_display_title">Ambient display</string>
+    <string name="ambient_display_enable_title">Ambient display</string>
+    <string name="ambient_display_enable_summary">Wake screen when you receive notifications</string>
+    <string name="ambient_display_gestures_title">Ambient display gestures</string>
+    <string name="ambient_display_gestures_summary">Additional gestures to wake the screen</string>
+    <string name="ambient_display_summary">Wake screen when you receive notifications</string>
+    <string name="ambient_display_always_on_title">Always on</string>
+    <string name="dialog_ok">OK</string>
+    <string name="disabled">Disabled</string>
+    <string name="doze_panel_title">Doze</string>
+    <string name="doze_settings_help_text">These features use sensor events to launch a doze notification pulse. The chosen sensor is only enabled when the device receives a notification, this helps to reduce battery usage. There is also an option to enable the chosen sensor as soon as the screen turns off, this will cause higher battery usage.</string>
+    <string name="doze_settings_help_title">Help</string>
+    <string name="pickup_sensor_title">Pickup sensor</string>
+    <string name="pick_up_gesture_title">Pick-up</string>
+    <string name="pick_up_gesture_summary">Pulse notifications on pick-up</string>
+    <string name="pick_up_wake_gesture_summary">Wake device on pick-up</string>
+    <string name="pocket_gesture_title">Pocket</string>
+    <string name="pocket_gesture_summary">Pulse notifications on removal from pocket</string>
+    <string name="proximity_sensor_title">Proximity sensor</string>
+    <string name="ambient_display_always_on_summary">Show time, notification icons, and other info. Increased battery usage.</string>
+    <string name="switch_bar_off">Off</string>
+    <string name="switch_bar_on">On</string>
+
+    <!-- Kcal -->
+    <string name="kcal_title">Kernel color calibration</string>
+    <string name="kcal_summary">Calibrate display via Kcal</string>
+    <string name="kcal_values">Adjustable values</string>
+    <string name="red_title">Red</string>
+    <string name="green_title">Green</string>
+    <string name="blue_title">Blue</string>
+    <string name="saturation_title">Saturation</string>
+    <string name="contrast_title">Contrast</string>
+    <string name="hue_title">Hue</string>
+    <string name="value_title">Value</string>
+
+    <!-- Filesystem -->
+    <string name="fsync_title">FSync</string>
+    <string name="fsync_summary">fsync off/on</string>
+    <string name="fsync_info">Disabling fsync can speed up performance at the risk of potential data loss in the event of a system crash</string>
+
+    <!-- GPU -->
+    <string name="adrenoboost_title">Adrenoboost</string>
+    <string name="adrenoboost_summary">Ramp up GPU clockspeed faster with values ranging from 0-3, 0 being off and 3 for most aggressive</string>
+
+    <!-- Power -->
+    <string name="powershare_title">Wireless powershare</string>
+    <string name="powershare_summary">Enable reverse wireless charging</string>
+    <string name="quiet_mode_title">Quiet mode</string>
+    <string name="quiet_mode_summary">Enable Quiet mode for OEM wireless charger</string>
+
+    <!-- USB -->
+    <string name="usb2_fast_charge_title">Fast charge</string>
+    <string name="usb2_fast_charge_summary">Force fast charging of up to 900mA while connected to a USB 2.0 port with MTP enabled</string>
+    <string name="usb2_fast_charge_info">May interfere with OEM fast charging implementation; Only enable when applicable</string>
+    <string name="usb_otg_title">USB-OTG</string>
+    <string name="usb_otg_summary">Enable USB on-the-go mode</string>
+
+    <!-- Sound control -->
+    <string name="mic_gain_title">Microphone gain</string>
+    <string name="mic_gain_summary">Define the gain of the microphone</string>
+    <string name="speaker_gain_title">Speaker gain</string>
+    <string name="speaker_gain_summary">Define the gain of the speaker</string>
+
+    <!-- Touchgestures -->
+    <string name="touchscreen_gesture_settings_title">Touchscreen gestures</string>
+    <string name="touchscreen_gesture_settings_summary">Perform various touchscreen gestures for quick actions</string>
+    <string name="touchscreen_gesture_two_finger_down_swipe_title">Swipe down with two fingers</string>
+    <string name="touchscreen_gesture_one_finger_up_swipe_title">Swipe up with one finger</string>
+    <string name="touchscreen_gesture_one_finger_up_swipe_home_title">Swipe up from the home button</string>
+    <string name="touchscreen_gesture_one_finger_down_swipe_title">Swipe down with one finger</string>
+    <string name="touchscreen_gesture_one_finger_left_swipe_title">Swipe left with one finger</string>
+    <string name="touchscreen_gesture_one_finger_right_swipe_title">Swipe right with one finger</string>
+    <string name="touchscreen_gesture_single_tap_title">Single tap</string>
+    <string name="touchscreen_gesture_up_arrow_title">Draw a \"Λ\"</string>
+    <string name="touchscreen_gesture_down_arrow_title">Draw a \"V\"</string>
+    <string name="touchscreen_gesture_right_arrow_title">Draw a \"&lt;\"</string>
+    <string name="touchscreen_gesture_left_arrow_title">Draw a \"&gt;\"</string>
+    <string name="touchscreen_gesture_letter_c_title">Draw the letter \"C\"</string>
+    <string name="touchscreen_gesture_letter_e_title">Draw the letter \"e\"</string>
+    <string name="touchscreen_gesture_letter_o_title">Draw the letter \"O\"</string>
+    <string name="touchscreen_gesture_letter_m_title">Draw the letter \"M\"</string>
+    <string name="touchscreen_gesture_letter_s_title">Draw the letter \"S\"</string>
+    <string name="touchscreen_gesture_letter_v_title">Draw the letter \"V\"</string>
+    <string name="touchscreen_gesture_letter_w_title">Draw the letter \"W\"</string>
+    <string name="touchscreen_gesture_letter_z_title">Draw the letter \"Z\"</string>
+    <string name="touchscreen_gesture_action_dialog_title">Gesture action</string>
+    <string name="touchscreen_gesture_action_do_nothing">Do nothing</string>
+    <string name="touchscreen_gesture_action_flashlight">Toggle flashlight</string>
+    <string name="touchscreen_gesture_action_camera">Open the camera</string>
+    <string name="touchscreen_gesture_action_browser">Open the browser</string>
+    <string name="touchscreen_gesture_action_dialer">Open the dialer</string>
+    <string name="touchscreen_gesture_action_email">View your emails</string>
+    <string name="touchscreen_gesture_action_messages">View your messages</string>
+    <string name="touchscreen_gesture_action_play_pause_music">Play/pause music</string>
+    <string name="touchscreen_gesture_action_previous_track">Play the previous music track</string>
+    <string name="touchscreen_gesture_action_next_track">Play the next music track</string>
+    <string name="touchscreen_gesture_action_volume_down">Lower media volume</string>
+    <string name="touchscreen_gesture_action_volume_up">Raise media volume</string>
+    <string name="touchscreen_gesture_action_ambient_display">Show ambient display</string>
+    <string name="touchscreen_gesture_action_wake_device">Wake device</string>
+    <string name="touchscreen_gesture_action_wechat_pay">Wechat Pay</string>
+    <string name="touchscreen_gesture_action_alipay_pay">Alipay Pay</string>
+    <string name="touchscreen_gesture_action_wechat_scan">Wechat Scan</string>
+    <string name="touchscreen_gesture_action_alipay_scan">Alipay Scan</string>
+    <string name="touchscreen_gesture_action_alipay_trip">Alipay Trip</string>
+    <string name="touchscreen_gesture_action_wallet_trip">Wallet Trip</string>
+    <string name="touchscreen_gesture_action_device_extras">OPlusExtras</string>
+    <string name="touchscreen_gesture_action_google_maps">Google Maps</string>
+    <string name="touchscreen_gesture_action_google_search">Google Search</string>
+
+    <!-- Edge limit -->
+    <string name="edge_limit_title">Edge limit</string>
+    <string name="edge_limit_summary">Disable the touchpanels edge limit</string>
+
+    <!-- High touch polling rate -->
+    <string name="high_touch_polling_rate_title">High touch polling rate</string>
+    <string name="high_touch_polling_rate_summary">Increase touchscreen polling rate</string>
+    <string name="high_touch_polling_rate_info">May decrease battery life</string>
+
+    <!-- UiBench -->
+    <string name="jitter_test_title">Jitter</string>
+    <string name="jitter_test_summary">Calculate rendering jitter</string>
+
+    <!-- Vibrator -->
+    <string name="vibrator_strength_title">System strength</string>
+    <string name="vibrator_strength_summary">Define the strength of the vibrator</string>
+
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">by default</string>
+    <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong tap to set</string>
+    <string name="custom_seekbar_default_value_is_set">Default value is set</string>
+</resources>
