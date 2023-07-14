@@ -263,6 +263,37 @@
             android:title="@string/usb_otg_title"
             android:summary="@string/usb_otg_summary" />
     </PreferenceCategory>
+    
+    <!-- Start of audio Category -->
+    <PreferenceCategory
+        android:key="audio"
+        android:title="@string/category_audio">
+
+        <Preference
+            android:key="dolby_atmos"
+            android:title="@string/dolby_title"
+            android:summary="@string/dolby_summary" >
+            <intent
+                android:targetPackage="@string/config_DolbyPackage"
+                android:targetClass="@string/config_DolbyStartActivity" />
+        </Preference>
+    </PreferenceCategory>
+    
+<!-- Start of NrMode Switcher -->
+    <PreferenceCategory
+        android:key="nrmode"
+        android:title="@string/category_nrmode">
+
+        <Preference
+            android:key="nr_mode_switcher"
+    android:persistent="false"
+    android:title="@string/nr_mode_switcher_title"
+    android:summary="@string/nr_mode_switcher_summary">
+    <intent
+        android:targetPackage="org.nameless.nrmode"
+        android:targetClass="org.nameless.nrmode.NrModeSettingsActivity" />
+        </Preference>
+    </PreferenceCategory>
 
     <!-- Start of vibrator category -->
     <PreferenceCategory
@@ -277,5 +308,13 @@
             android:max="3"
             android:min="0"
             android:defaultValue="3" />
+    </PreferenceCategory>
+    
+    <!-- Custom Parts Shortcuts -->
+    <PreferenceCategory>
+
+        <Preference
+            android:key="parts_shortcut"
+            android:title="@string/parts_shortcut_summary" />
     </PreferenceCategory>
 </PreferenceScreen>

@@ -27,6 +27,7 @@ import androidx.preference.PreferenceGroup;
 import androidx.preference.PreferenceFragment;
 import androidx.preference.PreferenceManager;
 import androidx.preference.Preference;
+import androidx.preference.Preference.OnPreferenceClickListener;
 import androidx.preference.SwitchPreference;
 
 import java.util.Arrays;
@@ -115,6 +116,14 @@ public class OPlusExtras extends PreferenceFragment
 
     private static final String KEY_USB_OTG = "usb_otg";
     private SwitchPreference mUSBOTGSwitch;
+    
+    // AUDIO
+    public static final String KEY_CATEGORY_AUDIO = "audio";
+    public static final String KEY_DOLBY = "dolby_atmos";
+    
+    // NRMODE
+    public static final String KEY_CATEGORY_NRMODE = "nrmode";
+    public static final String KEY_NR_MODE_SWITCHER = "nr_mode_switcher";
 
     // Vibrator
     private static final String KEY_VIBRATOR_STRENGTH = "vibrator_strength";
@@ -122,6 +131,10 @@ public class OPlusExtras extends PreferenceFragment
     private static final long testVibrationPattern[] = {0,5};
     private CustomSeekBarPreference mVibratorStrengthPreference;
     private Vibrator mVibrator;
+    
+    // Custom Parts Shortcuts
+    private static final String KEY_PARTS_SHORTCUT = "parts_shortcut";
+    private Preference mPartsShortcutPreference;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -400,6 +413,33 @@ public class OPlusExtras extends PreferenceFragment
         if (!getResources().getBoolean(R.bool.config_deviceSupportsOTG)) {
             findPreference(KEY_USB_OTG).setVisible(false);
         }
+        
+        // Audio
+        boolean audioCategory = false;
+        
+        // Dolby
+        
+        audioCategory = audioCategory | (!getResources().getBoolean(R.bool.config_deviceSupportsDolby));
+        if (!getResources().getBoolean(R.bool.config_deviceSupportsDolby)) {
+            findPreference(KEY_DOLBY).setVisible(false);
+        }
+
+        if (!audioCategory) {
+            getPreferenceScreen().removePreference((Preference) findPreference(KEY_CATEGORY_AUDIO));
+        }
+        
+        // NRMODE
+        boolean nrmodeCategory = false;
+        
+        // NR_MODE_SWITCHER
+        nrmodeCategory = nrmodeCategory | (!getResources().getBoolean(R.bool.config_deviceSupportsNrModeSwitcher));
+        if (!getResources().getBoolean(R.bool.config_deviceSupportsNrModeSwitcher)) {
+            findPreference(KEY_NR_MODE_SWITCHER).setVisible(false);
+        }
+
+        if (!nrmodeCategory) {
+            getPreferenceScreen().removePreference((Preference) findPreference(KEY_CATEGORY_NRMODE));
+        }
 
         // Vibrator strength preference
         mVibratorStrengthPreference =  (CustomSeekBarPreference) findPreference(KEY_VIBRATOR_STRENGTH);
@@ -413,6 +453,21 @@ public class OPlusExtras extends PreferenceFragment
 
         if (!getResources().getBoolean(R.bool.config_deviceSupportsVibStrength)) {
             findPreference(KEY_VIBRATOR_STRENGTH).setVisible(false);
+        }
+        
+        // Custom Parts Shortcuts
+        mPartsShortcutPreference = (Preference) findPreference(KEY_PARTS_SHORTCUT);
+        mPartsShortcutPreference.setOnPreferenceClickListener(new OnPreferenceClickListener() {
+            public boolean onPreferenceClick(Preference preference) {
+                // Launch custom parts app
+                try {
+                    Runtime.getRuntime().exec("am start -n " + getResources().getString(R.string.parts_shortcut_packageName));
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                
+                return true);
+            }
         }
 
         // Remove OPlusExtras categories if none of their preferences are visible

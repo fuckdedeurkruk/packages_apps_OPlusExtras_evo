@@ -54,7 +54,7 @@
     <bool name="config_deviceSupportsDisablingEdgeLimit">false</bool>
 
     <!-- Whether device supports High Touch Polling Rate -->
-    <bool name="config_deviceSupportsHightTouchPollingRate">false</bool>   
+    <bool name="config_deviceSupportsHightTouchPollingRate">false</bool>
 
     <!-- Whether device supports Touch Gestures -->
     <bool name="config_deviceSupportsTouchGestures">false</bool>
@@ -67,5 +67,11 @@
 
     <!-- Whether device supports Vibration Strength -->
     <bool name="config_deviceSupportsVibStrength">false</bool>
+    
+    <!-- Whether device supports NrMode Switcher -->
+    <bool name="config_deviceSupportsNrModeSwitcher">false</bool>
+    
+    <!-- Whether device supports Dolby -->
+    <bool name="config_deviceSupportsDolby">false</bool>
 
 </resources>

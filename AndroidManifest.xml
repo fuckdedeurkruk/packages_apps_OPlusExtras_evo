@@ -13,6 +13,9 @@
 
     <uses-permission android:name="android.permission.INJECT_EVENTS"/>
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <permission
         android:name="org.evolution.oplus.OPlusExtras.touch.TRIGGER_SCREEN_OFF_GESTURE"
@@ -28,8 +31,14 @@
         android:label="@string/oplus_extras_title"
         android:defaultToDeviceProtectedStorage="true"
         android:directBootAware="true"
+        android:supportsRtl="true"
         android:theme="@style/Theme.SubSettingsBase"
         android:exported="true">
+        
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            tools:replace="android:authorities"/>
 
         <!-- OPlus Extras -->
         <activity
@@ -50,25 +59,20 @@
         </activity>
 
         <activity android:name=".OPlusExtras"
-            android:exported="false" />
+            android:exported="true" />
         <activity android:name=".slider.KeyHandler"
-            android:exported="false" />
+            android:exported="true" />
         <activity android:name=".touch.KeyHandler"
-            android:exported="false" />
+            android:exported="true" />
 
         <!-- Boot reciever -->
         <receiver android:name=".Startup"
+            android:enabled="true"
             android:exported="false">  
             <intent-filter>
                 <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
-
-        <!-- Provider -->
-        <provider
-            android:name="androidx.startup.InitializationProvider"
-            android:authorities="${applicationId}.androidx-startup"
-            tools:replace="android:authorities"/>
 
         <!-- Doze Activity -->
         <activity
