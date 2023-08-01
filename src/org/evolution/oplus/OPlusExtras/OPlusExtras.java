@@ -45,10 +45,6 @@ public class OPlusExtras extends PreferenceFragment
     private ListPreference mMiddleKeyPref;
     private ListPreference mBottomKeyPref;
 
-    // CPU
-    private static final String KEY_POWER_EFFICIENT_WORKQUEUE = "power_efficient_workqueue";
-    private SwitchPreference mPowerEfficientWorkqueueModeSwitch;
-
     private static final String KEY_TOUCHBOOST = "touchboost";
     private SwitchPreference mTouchboostModeSwitch;
 
@@ -155,20 +151,6 @@ public class OPlusExtras extends PreferenceFragment
 
        if (!getResources().getBoolean(R.bool.config_deviceSupportsAlertSlider)) {
             findPreference(KEY_ALERT_SLIDER).setVisible(false);
-        }
-
-        // Power efficient workqueue switch
-        mPowerEfficientWorkqueueModeSwitch = (SwitchPreference) findPreference(KEY_POWER_EFFICIENT_WORKQUEUE);
-        if (Utils.isFileWritable(Nodes.nodePowerEfficientWorkqueue(context))) {
-            mPowerEfficientWorkqueueModeSwitch.setEnabled(true);
-            mPowerEfficientWorkqueueModeSwitch.setChecked(sharedPrefs.getBoolean(KEY_POWER_EFFICIENT_WORKQUEUE, false));
-            mPowerEfficientWorkqueueModeSwitch.setOnPreferenceChangeListener(this);
-        } else {
-            mPowerEfficientWorkqueueModeSwitch.setEnabled(false);
-        }
-
-       if (!getResources().getBoolean(R.bool.config_deviceSupportsPowerEfficientWorkqueue)) {
-            findPreference(KEY_POWER_EFFICIENT_WORKQUEUE).setVisible(false);
         }
 
         // MSM touchboost switch
@@ -451,15 +433,8 @@ public class OPlusExtras extends PreferenceFragment
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        // Power efficient workqueue switch
-        if  (preference == mPowerEfficientWorkqueueModeSwitch) {
-            boolean enabled = (Boolean) newValue;
-            SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(getContext());
-            sharedPrefs.edit().putBoolean(KEY_POWER_EFFICIENT_WORKQUEUE, enabled).commit();
-            Utils.writeValue(Nodes.nodePowerEfficientWorkqueue(getContext()), enabled ? "1" : "0");
-            return true;
         // MSM touchboost switch
-        } else if  (preference == mTouchboostModeSwitch) {
+        if  (preference == mTouchboostModeSwitch) {
             boolean enabled = (Boolean) newValue;
             SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(getContext());
             sharedPrefs.edit().putBoolean(KEY_TOUCHBOOST, enabled).commit();
@@ -858,15 +833,6 @@ public class OPlusExtras extends PreferenceFragment
                 return R.array.config_defaultSliderActionsForColorSpace;
             default:
                 return 0;
-        }
-    }
-
-    // Power efficient workqueue switch
-    public static void restorePowerEfficientWorkqueueSetting(Context context) {
-        if (Utils.isFileWritable(Nodes.nodePowerEfficientWorkqueue(context))) {
-            SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
-            boolean value = sharedPrefs.getBoolean(KEY_POWER_EFFICIENT_WORKQUEUE, false);
-            Utils.writeValue(Nodes.nodePowerEfficientWorkqueue(context), value ? "1" : "0");
         }
     }
 

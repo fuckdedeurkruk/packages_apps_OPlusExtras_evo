@@ -5,9 +5,6 @@
 -->
 <resources>
 
-    <!-- Power Efficient Workqueue sysfs node path -->
-    <string name="node_power_efficient_workqueue_switch" translatable="false"></string>
-
     <!-- MSM Touchboost sysfs node path -->
     <string name="node_touchboost_switch" translatable="false"></string>
 

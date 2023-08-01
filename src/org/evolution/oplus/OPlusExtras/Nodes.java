@@ -14,11 +14,6 @@ public final class Nodes {
     private Nodes() {
     }
 
-    // Power efficient workqueue switch
-    public static String nodePowerEfficientWorkqueue(Context context) {
-        return Utils.getNode(context, R.string.node_power_efficient_workqueue_switch);
-    }
-
     // MSM touchboost switch
     public static String nodeTouchboost(Context context) {
         return Utils.getNode(context, R.string.node_touchboost_switch);

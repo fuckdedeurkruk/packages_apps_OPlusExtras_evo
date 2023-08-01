@@ -8,9 +8,6 @@
     <!-- Whether device supports Alert Slider -->
     <bool name="config_deviceSupportsAlertSlider">false</bool>
 
-    <!-- Whether device supports Power Efficient Workqueue -->
-    <bool name="config_deviceSupportsPowerEfficientWorkqueue">false</bool>
-
     <!-- Whether device supports MSM Touchboost -->
     <bool name="config_deviceSupportsTouchboost">false</bool>
 

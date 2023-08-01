@@ -12,8 +12,7 @@ OPlusExtras is a device specifc parts application, aimed at addressing the chall
 | --- | --- | --- | --- |
 | **Alert slider** | `Use slider for` | Configure what the Alert slider does (Notification, Flashlight, Brightness, Rotation, Ringer, Notification and ringer, Extra Dim, Night Light, Refresh rate & Colorspace). |N/A |
 |  | `Top/Mid/Bottom position` | Selects what each position of the alert slider is used for in accordance with what `Use slider for` is set to. |N/A |
-| **CPU** | `Power efficent workqueue` | Save power by rescheduling work to a core that is already awake. |[Commit 1/1](https://github.com/Evolution-X-Devices/kernel_oneplus_sm8250/commit/4f0c7c2bc0e0fa26582efc354010aa9bfa025400)  |
-|  | `Touchboost` | Boost CPU frequency on touchscreen input on qcom devices. | WIP|
+| **CPU** | `Touchboost` | Boost CPU frequency on touchscreen input on qcom devices. | WIP|
 | **Display** | `High brightness mode` | Enable peak luminance. | N/A |
 |  | `Antiflicker` | Prevent extensive flickering and reduce eye strain in low light conditions. |N/A |
 |  | `Kernel color calibration` | Calibrate display via Kcal on qcom devices (red, green, blue, saturation, hue, contrast, value). |[Commit 1/1](https://github.com/Evolution-X-Devices/kernel_oneplus_sm8250/commit/b58a0a2601827307083640cbb01e54382b289ca3) |

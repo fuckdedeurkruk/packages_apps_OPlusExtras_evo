@@ -76,8 +76,6 @@
     <string name="alert_slider_colorspace_brilliant">Brilliant</string>
 
     <!-- CPU -->
-    <string name="power_efficient_workqueue_title">Power efficient workqueue</string>
-    <string name="power_efficient_workqueue_summary">Save power by rescheduling work to a core that is already awake</string>
     <string name="touchboost_title">Touchboost</string>
     <string name="touchboost_summary">Whether to boost CPU frequency on touchscreen input</string>
 

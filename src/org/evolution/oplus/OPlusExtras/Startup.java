@@ -25,7 +25,6 @@ public class Startup extends BroadcastReceiver {
         final String action = intent.getAction();
             // Main
             OPlusExtras.restoreSliderStates(context);
-            OPlusExtras.restorePowerEfficientWorkqueueSetting(context);
             OPlusExtras.restoreTouchboostSetting(context);
             OPlusExtras.restoreAntiFlickerSetting(context);
             OPlusExtras.restoreHBMSetting(context);

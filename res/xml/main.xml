@@ -49,11 +49,6 @@
         android:title="@string/category_cpu">
 
         <SwitchPreference
-            android:key="power_efficient_workqueue"
-            android:title="@string/power_efficient_workqueue_title"
-            android:summary="@string/power_efficient_workqueue_summary" />
-
-        <SwitchPreference
             android:key="touchboost"
             android:title="@string/touchboost_title"
             android:summary="@string/touchboost_summary" />
